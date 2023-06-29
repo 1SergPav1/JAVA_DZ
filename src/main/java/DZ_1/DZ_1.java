@@ -8,7 +8,7 @@ public class DZ_1 {
 
     public static void main(String[] args) {
         boolean f = true;
-        while(f){
+        while (f) {
             System.out.println("Укажите номер задачи:");
             System.out.println("1 - Задача 1");
             System.out.println("2 - Задача 2");
@@ -16,7 +16,7 @@ public class DZ_1 {
             System.out.println("0 - Завершение работы приложения");
 //            int no = Integer.parseInt(scanner.nextLine());
             String no = scanner.next();
-            switch(no){
+            switch (no) {
                 case "2":
                     task2();
                     break;
@@ -37,7 +37,7 @@ public class DZ_1 {
         }
     }
 
-    static void task1(){
+    static void task1() {
         System.out.print("Введите число n: ");
         int n = scanner.nextInt();
         int resultTriangle = triangle(n);
@@ -45,7 +45,7 @@ public class DZ_1 {
         System.out.printf("n-ное треугольное число = %d   факториал = %d", resultTriangle, resultFactorial);
     }
 
-    static int triangle(int n){
+    static int triangle(int n) {
         int summa = 0;
         for (int i = 1; i <= n; i++) {
             summa += i;
@@ -53,7 +53,7 @@ public class DZ_1 {
         return summa;
     }
 
-    static int factorial(int n){
+    static int factorial(int n) {
         int fact = 1;
         for (int i = 1; i <= n; i++) {
             fact *= i;
@@ -62,7 +62,7 @@ public class DZ_1 {
     }
 
 
-    static void task2(){
+    static void task2() {
         for (int i = 1; i <= 1000; i++) {
             if (isSimple(i)) {
                 System.out.printf("%d, ", i);
@@ -71,16 +71,16 @@ public class DZ_1 {
     }
 
     public static boolean isSimple(Integer number) {
-        if(number < 2) return false;
-        for(int i = 2; i <= Math.sqrt(number); i++) {
-            if(number % i == 0) {
+        if (number < 2) return false;
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
                 return false;
             }
         }
         return true;
     }
 
-    static void task3(){
+    static void task3() {
         System.out.print("Введите первое число: ");
         int num1 = scanner.nextInt();
 
@@ -117,6 +117,4 @@ public class DZ_1 {
 
         System.out.printf("Результат: %s\n", result);
     }
-
-
 }
