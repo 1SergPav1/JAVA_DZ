@@ -18,7 +18,6 @@ public class DZ_2 {
             System.out.println("Укажите номер задачи:");
             System.out.println("1 - Задача 1");
             System.out.println("2 - Задача 2");
-            System.out.println("3 - Задача 3");
             System.out.println("0 - Завершение работы приложения");
             String no = scanner.next();
             switch (no) {
