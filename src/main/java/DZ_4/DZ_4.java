@@ -14,22 +14,18 @@ public class DZ_4 {
             System.out.println("Укажите номер задачи:");
             System.out.println("1 - Задача 1");
             System.out.println("2 - Задача 2");
+            System.out.println("3 - Задача 3");
             System.out.println("0 - Завершение работы приложения");
             String no = scanner.next();
             switch (no) {
-                case "1":
-                    task1();
-                    break;
-                case "2":
-                    task2();
-                    break;
-                case "0":
+                case "1" -> task1();
+                case "2" -> task2();
+                case "3" -> task3();
+                case "0" -> {
                     System.out.println("Завершение работы приложения.");
                     f = false;
-                    break;
-                default:
-                    System.out.println("Некорректный номер задачи,\nповторите попытку ввода.");
-                    break;
+                }
+                default -> System.out.println("Некорректный номер задачи,\nповторите попытку ввода.");
             }
         }
 
@@ -61,7 +57,7 @@ public class DZ_4 {
 
 
         class MyQueue<T> {
-            private LinkedList<T> elements = new LinkedList<>();
+            private final LinkedList<T> elements;
 
             public MyQueue() {
                 elements = new LinkedList<>();
@@ -108,9 +104,66 @@ public class DZ_4 {
 
     static void task3() {
 
+        StringBuilder string = new StringBuilder();
+        LinkedList<String> log = new LinkedList<>();
 
+        boolean f = true;
+        while (f) {
+            System.out.println("Выберите операцию: ");
+            System.out.println("1. Сложение");
+            System.out.println("2. Вычитание");
+            System.out.println("3. Удаление последней операции из лога");
+            System.out.println("0. Выход из калькулятора");
+
+            int operation = scanner.nextInt();
+            switch (operation) {
+                case 1 -> {
+                    System.out.print("Введите первое число: ");
+                    double num1 = scanner.nextInt();
+                    System.out.print("Введите второе число: ");
+                    double num2 = scanner.nextDouble();
+                    double result1 = add(num1, num2);
+                    string.setLength(0);
+                    string.append(num1).append("+").append(num2).append("=").append(result1);
+                    log.add(string.toString());
+                    System.out.println(log);
+                }
+                case 2 -> {
+                    System.out.print("Введите первое число: ");
+                    int num3 = scanner.nextInt();
+                    System.out.print("Введите второе число: ");
+                    double num4 = scanner.nextDouble();
+                    double result2 = subtraction(num3, num4);
+                    string.setLength(0);
+                    string.append(num3).append("-").append(num4).append("=").append(result2);
+                    log.add(string.toString());
+                    System.out.println(log);
+                }
+                case 3 -> {
+                    if (!log.isEmpty()) {
+                        log.removeLast();
+                        System.out.println(log);
+                    }
+                    else {
+                        System.out.println("Лог пуст!");
+                    }
+                }
+                case 0 -> f = false;
+                default -> {
+                    System.out.println("Ошибка: неверная операция");
+                    return;
+                }
+            }
+        }
 
     }
 
+    static double add(double num1, double num2) {
+        return num1 + num2;
+    }
+
+    static double subtraction(double num1, double num2) {
+        return num1 - num2;
+    }
 }
 
