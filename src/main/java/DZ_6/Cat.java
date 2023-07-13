@@ -52,13 +52,4 @@ public class Cat {
     public String toString() {
         return String.format("Кличка: %s / возраст: %d", name, age);
     }
-
-//    public boolean equals() {
-//
-//    }
-//
-//    public int hashCode() {
-//
-//    }
-
 }

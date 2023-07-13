@@ -8,7 +8,6 @@ public class DZ_6 {
 
     static Cat cat1 = new Cat("Tom", 5);
     static Cat cat2 = new Cat("Леопольд", 10);
-
     static Cat cat3 = new Cat("Tom", 5);
 
 
@@ -26,8 +25,4 @@ public class DZ_6 {
         System.out.println(catSet);
 
     }
-
-;
-
-
 }
