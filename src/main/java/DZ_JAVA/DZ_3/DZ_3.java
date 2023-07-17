@@ -1,4 +1,4 @@
-package DZ_3;
+package DZ_JAVA.DZ_3;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -65,5 +65,4 @@ public class DZ_3 {
         double average = sum / array.size();
         return average;
     }
-
 }

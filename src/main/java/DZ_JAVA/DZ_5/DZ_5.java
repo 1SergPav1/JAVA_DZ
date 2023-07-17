@@ -1,4 +1,4 @@
-package DZ_5;
+package DZ_JAVA.DZ_5;
 
 import java.util.ArrayList;
 import java.util.HashMap;

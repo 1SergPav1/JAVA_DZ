@@ -1,4 +1,4 @@
-package DZ_4;
+package DZ_JAVA.DZ_4;
 
 import java.util.LinkedList;
 import java.util.Scanner;

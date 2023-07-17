@@ -1,4 +1,4 @@
-package DZ_2;
+package DZ_JAVA.DZ_2;
 
 import java.io.File;
 import java.io.FileWriter;
