@@ -19,5 +19,5 @@ public class DZ_1 {
         System.out.println(machine1.getProduct("Americano", 300, 70));
         System.out.println(machine1.getProduct("Earl grey", 500, 85));
     }
-    }
+}
 
