@@ -1,4 +1,4 @@
-package Seminar_2;
+package OOP.Seminar_2;
 
 public abstract class Actor implements ActorBehavior {
 
