@@ -1,4 +1,4 @@
-package Seminar_2;
+package OOP.Seminar_2;
 
 public class DZ_2 {
 
@@ -13,6 +13,4 @@ public class DZ_2 {
         market.update();
 
     }
-
-
 }
